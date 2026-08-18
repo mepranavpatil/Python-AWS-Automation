@@ -1,7 +1,16 @@
 import boto3
+from botocore.exceptions import ClientError
 
-ec2 = boto3.client("ec2")
+try:
+    ec2 = boto3.client("ec2")
 
-response = ec2.describe_instances()
+    response = ec2.describe_instances()
 
-print("Reservations Found:", len(response["Reservations"]))
+    print("Connection Successful")
+    print("Reservations Found:", len(response["Reservations"]))
+
+except ClientError as e:
+    print("AWS Error:", e)
+
+except Exception as e:
+    print("Unexpected Error:", e)
