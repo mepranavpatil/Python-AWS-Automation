@@ -14,6 +14,7 @@ try:
     )
 
     instance_ids = []
+    
 
     for reservation in response["Reservations"]:
         for instance in reservation["Instances"]:
