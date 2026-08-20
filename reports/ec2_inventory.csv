@@ -1,0 +1,4 @@
+Instance ID,Name,State,Type,Public IP
+i-0495390e9e4994ca6,awsDocker,stopped,t3.micro,N/A
+i-0c5f4a587fe9c0fa1,jenkins_Master,terminated,t2.micro,N/A
+i-024b61e8fc264cbfc,Jenkins-M,terminated,t2.micro,N/A
